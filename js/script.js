@@ -1,23 +1,28 @@
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Jack
+// Created on: May, 25 2024 
 // This file contains the JS functions for index.html
 
 "use strict"
 
-function multiplicationForm() {
+function myButtonClicked() {
 
-  // Get user input
-  var num1 = parseInt(document.getElementById("num1").value);
-  var num2 = parseInt(document.getElementById("num2").value);
+  //input
+  let firstNumber = parseInt(document.getElementById("first-number").value)
+  let secondNumber = parseInt(document.getElementById("second-number").value)
 
-  // Perform multiplication using addition and loops
-  var result = 0;
-  for (var i = 0; i < num2; i++) {
-    result = num1 + num1; // Add num1 to itself num2 times
+  //process
+  let counter = 0
+  let result = 0
+
+  while (counter < secondNumber) {
+    result += firstNumber
+    counter += 1
   }
-  // Display the result
-  var resultDiv = document.getElementById("result");
-  resultDiv.textContent = "The result of " + num1 + " * " + num2 + " is: " + result;
+
+  let finalResult = result
+
+  // output 
+  document.getElementById("final-answer").innerHTML = "The answer is " + finalResult
 }
